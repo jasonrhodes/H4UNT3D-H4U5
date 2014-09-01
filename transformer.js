@@ -20,5 +20,6 @@ module.exports = function (imageBuffer) {
   $ composite -gravity /images/posessed.gif
   $ composite -gravity /images/scary_girl_clean.gif
 
+convert /images/3_spooky_skelly.gif /images/candles.gif -average  anthony_ghosts.jpg
 
 };

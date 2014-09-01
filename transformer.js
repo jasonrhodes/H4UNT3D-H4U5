@@ -1,11 +1,31 @@
 module.exports = function (imageBuffer) {
 
 
-  // do stuff to transform image
+// do stuff to transform image
 
   return imageBuffer;
 
-// idk wtf I'm doing: 
+// idk wtf I'm doing. Is this to get the user's uploaded image? IDK IDK IDK
+
+  var fs = require('fs')
+  , gm = require('./gm');
+
+// obtain the size of an image so it's not FUKD UP?? IDK
+
+  gm('/path/to/my/img.jpg')
+  .size(function (err, size) {
+  if (!err)
+  console.log(size.width > size.height ? 'wider' : 'taller than you');
+});
+
+// output all available image properties
+
+gm('/path/to/img.png')
+.identify(function (err, data) {
+  if (!err) console.log(data)
+});
+
+// These are all the images is this even where it goes? Idk
 
   -seed 
 
